@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "eternaleats",
+  "version": "${version}",
+
+  "name": "Eternal Eats",
+  "description": "Eat any food at any time",
+  "authors": [
+    "SFort"
+  ],
+  "contact": {
+    "sources": "https://github.com/SFort/MC-eternaleats"
+  },
+
+  "license": "MIT",
+
+  "environment": "*",
+  "mixins": [
+    "eternaleats.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "*"
+  }
+}
