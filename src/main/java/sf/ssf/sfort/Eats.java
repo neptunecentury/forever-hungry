@@ -42,11 +42,10 @@ public class Eats implements ModInitializer{
             forceDelay = ls[4].contains("true");
             ls[4] = String.valueOf(forceDelay);
 
-            if(ls.length>defaultDesc.size()*2){
+
                 for (int i = (defaultDesc.size()*2)+1; i<ls.length;i+=2){
                     ls[i] = "!#Unknown value / config from the future";
                 }
-            }
             Files.write(confFile.toPath(), Arrays.asList(ls));
             System.out.println("tf.ssf.sfort.eternaleats successfully loaded config file");
         } catch(Exception e) {
