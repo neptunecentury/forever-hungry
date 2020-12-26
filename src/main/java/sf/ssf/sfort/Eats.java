@@ -13,7 +13,7 @@ import java.util.*;
 public class Eats implements ModInitializer{
     public static Logger LOGGER = LogManager.getLogger();
 
-    public static int delay = 65;
+    public static int delay = 0;
     public static boolean forceDelay = false;
     public static int difficultyScale = 0;
     
