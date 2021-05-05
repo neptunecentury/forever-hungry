@@ -19,9 +19,6 @@
     "eternaleats.mixins.json"
   ],
   "entrypoints": {
-    "main": [
-      "sf.ssf.sfort.Eats"
-    ]
   },
 
   "depends": {
