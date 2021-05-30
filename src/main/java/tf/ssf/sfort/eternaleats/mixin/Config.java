@@ -1,4 +1,4 @@
-package tf.ssf.sfort.mixin;
+package tf.ssf.sfort.eternaleats.mixin;
 
 import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.Level;
@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Config implements IMixinConfigPlugin {
+    public static final String mod = "tf.ssf.sfort.eternaleats";
     public static Logger LOGGER = LogManager.getLogger();
 
     public static int delay = 0;
@@ -61,20 +62,18 @@ public class Config implements IMixinConfigPlugin {
 
             if (hash != Arrays.hashCode(ls))
                 Files.write(confFile.toPath(), Arrays.asList(ls));
-            LOGGER.log(Level.INFO,"tf.ssf.sfort.eternaleats successfully loaded config file");
+            LOGGER.log(Level.INFO,mod+" successfully loaded config file");
         } catch(Exception e) {
-            LOGGER.log(Level.ERROR,"tf.ssf.sfort.eternaleats failed to load config file, using defaults\n"+e);
+            LOGGER.log(Level.ERROR,mod+" failed to load config file, using defaults\n"+e);
         }
     }
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         switch (mixinClassName){
-            case "tf.ssf.sfort.mixin.Eats":
-                return true;
-            case "tf.ssf.sfort.mixin.Instant":
+            case mod+".mixin.Instant":
                 return !(eatDuration.x == 32 && eatDuration.y == 16);
             default:
-                return false;
+                return true;
         }
     }
     @Override public String getRefMapperConfig() { return null; }

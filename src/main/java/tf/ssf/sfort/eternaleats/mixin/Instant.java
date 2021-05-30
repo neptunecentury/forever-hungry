@@ -1,4 +1,4 @@
-package tf.ssf.sfort.mixin;
+package tf.ssf.sfort.eternaleats.mixin;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
