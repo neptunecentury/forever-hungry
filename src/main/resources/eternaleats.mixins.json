@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "tf.ssf.sfort.eternaleats.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "plugin": "tf.ssf.sfort.eternaleats.mixin.Config",
   "mixins": [
     "Eats",
