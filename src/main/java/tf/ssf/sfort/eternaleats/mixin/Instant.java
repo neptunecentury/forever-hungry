@@ -13,6 +13,6 @@ import java.util.Objects;
 public class Instant {
 	@Inject(method="getMaxUseTime(Lnet/minecraft/item/ItemStack;)I", at=@At(value="HEAD"), cancellable = true)
 	private void getMaxUseTime(ItemStack stack, CallbackInfoReturnable<Integer> info) {
-		if (stack.getItem().isFood()) info.setReturnValue(Objects.requireNonNull(stack.getItem().getFoodComponent()).isSnack()? Config.eatDuration.y : Config.eatDuration.x);
+		if (stack.getItem().isFood()) info.setReturnValue(Objects.requireNonNull(stack.getItem().getFoodComponent()).isSnack()? Config.eatDurationY : Config.eatDurationX);
 	}
 }

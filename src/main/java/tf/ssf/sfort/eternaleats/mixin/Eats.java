@@ -35,11 +35,11 @@ public class Eats extends LivingEntity {
 		}
 	}
 	@Inject(method = "canConsume", at = @At("HEAD"), cancellable = true)
-	public void canConsume(boolean ignoreHunger, CallbackInfoReturnable info) {
+	public void canConsume(boolean ignoreHunger, CallbackInfoReturnable<Boolean> info) {
 		if ((!hungerManager.isNotFull() || Config.forceDelay) && foodDelay==0){
 			info.setReturnValue(true);
 			foodDelay = Config.delay;
-			foodDelay += foodDelay* Config.difficultyScale*this.world.getDifficulty().getId();
+			foodDelay += foodDelay* Config.difficultyScale*this.getWorld().getDifficulty().getId();
 			info.cancel();
 		}
 	}
