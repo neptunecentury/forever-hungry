@@ -113,6 +113,7 @@ public class Config implements IMixinConfigPlugin {
                 FabricLoader.getInstance().getConfigDir().toString(),
                 "EternalEats.conf"
         );
+        if (!confFile.exists()) return;
         try {
             List<String> la = Files.readAllLines(confFile.toPath());
             String[] ls = la.toArray(new String[Math.max(la.size(), 10)|1]);
