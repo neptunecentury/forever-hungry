@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.neptunecentury.foreverhungry.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "com.neptunecentury.foreverhungry.mixin.ConfigPlugin",
+  "mixins": [
+    "Eats",
+    "Instant"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "id": "eternaleats",
+  "id": "forever-hungry",
   "version": "${version}",
 
-  "name": "Eternal Eats",
-  "description": "Eat any food at any time",
+  "name": "Forever Hungry",
+  "description": "Stay hungry. Eat forever.",
   "authors": [
-    "SFort"
+    "neptunecentury"
   ],
   "contact": {
-    "sources": "https://github.com/SFort/MC-eternaleats"
+    "sources": "https://github.com/neptunecentury/forever-hungry"
   },
 
   "license": "MIT",
 
   "environment": "*",
   "mixins": [
-    "eternaleats.mixins.json"
+    "foreverhungry.mixins.json"
   ],
   "entrypoints": {
   },
